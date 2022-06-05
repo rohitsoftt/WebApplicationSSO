@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Login
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @if (ViewBag.Username == null)
+    {
+        <a class="btn btn-primary" asp-action="Login"> Login</a>
+         
+    }
+    else
+    {
+        <div>
+            Welcome @ViewBag.Username
+        </div>
+         <a class="btn btn-primary" asp-action="LogOut"> LogOut</a>
+    }
+</div>
